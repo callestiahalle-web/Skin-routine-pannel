@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 512 512">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#f6e9f2"/>
+    <stop offset="38%" stop-color="#efd9e9"/>
+    <stop offset="70%" stop-color="#e4e6f2"/>
+    <stop offset="100%" stop-color="#ddebf5"/>
+  </linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="rgba(255,255,255,.82)"/>
+    <stop offset="100%" stop-color="rgba(255,255,255,.54)"/>
+  </linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#efb8cc"/>
+    <stop offset="60%" stop-color="#d9c6e5"/>
+    <stop offset="100%" stop-color="#aec8df"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#9b8fa6" flood-opacity=".16"/>
+  </filter>
+</defs>
+<rect width="192" height="192" rx="116" fill="url(#bg)"/>
+<circle cx="390" cy="102" r="56" fill="#ffffff" opacity=".45"/>
+<circle cx="110" cy="398" r="72" fill="#ffffff" opacity=".32"/>
+<g filter="url(#shadow)">
+  <rect x="102" y="102" width="308" height="308" rx="72" fill="rgba(255,255,255,.60)" stroke="rgba(255,255,255,.72)" stroke-width="2"/>
+  <rect x="136" y="152" width="240" height="200" rx="36" fill="rgba(255,255,255,.34)" stroke="rgba(255,255,255,.52)" stroke-width="2"/>
+  <rect x="168" y="124" width="26" height="46" rx="13" fill="#8b8095"/>
+  <rect x="318" y="124" width="26" height="46" rx="13" fill="#8b8095"/>
+  <path d="M180 210h92" stroke="#8c8297" stroke-width="16" stroke-linecap="round"/>
+  <path d="M180 254h124" stroke="#8c8297" stroke-width="16" stroke-linecap="round" opacity=".86"/>
+  <path d="M180 298h84" stroke="#8c8297" stroke-width="16" stroke-linecap="round" opacity=".74"/>
+  <path d="M298 292c18-24 55-15 55 14 0 26-28 44-55 62-27-18-55-36-55-62 0-29 37-38 55-14z" fill="url(#accent)" opacity=".96"/>
+  <path d="M322 214l12 12 28-32" fill="none" stroke="#efb8cc" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity=".94"/>
+</g>
+</svg>

@@ -1,4 +1,4 @@
-const APP_VERSION='v14-notes-icon';
+const APP_VERSION='v19-calendar-close-fix';
 
 const SCHEDULE = {"Понедельник": {"Утро": [["Round Lab 1025 Dokdo Cleanser или вода", "Пенка 30–40 сек, смыть. Если кожа спокойная — можно только вода."], ["Ma:nyo Bifida Biome Ampoule Toner", "Нанести ладонями, подождать 1 мин."], ["VT Cosmetics Reedle Shot Lifting Eye Cream с бакучиолом", "Количество с рисовое зерно, не близко к слизистой."], ["Round Lab Birch Juice SPF / SPF Cushion", "Нанести за 15 мин до выхода. Обязательно на шею."]], "Вечер — микротоки": [["Pyunkang Yul Deep Clear Cleansing Balm", "Если был SPF/макияж: 40–60 сек на сухую кожу, эмульгировать водой, смыть."], ["Round Lab 1025 Dokdo Cleanser", "20–30 сек, смыть. Кожа должна быть чистой перед гелем."], ["Mesomatrix гель для микротоков", "Нанести толстым слоем на чистую кожу."], ["Микротоковый аппарат", "10–15 мин по массажным линиям. Не работать по щитовидной железе и подвижному веку."], ["Ma:nyo Bifida Biome Ampoule Toner", "После снятия/смывания геля нанести тонер, подождать 1 мин."], ["Celimax Dual Barrier Skin Wearable Cream", "Средний слой для восстановления барьера."], ["Laneige Lip Sleeping Mask EX Berry", "Последний этап, плотный слой на губы."]]}, "Вторник": {"Утро": [["Вода или Round Lab 1025 Dokdo Cleanser", "Если кожа чувствительная после микротоков — только вода."], ["Ma:nyo Bifida Biome Ampoule Toner", "Нанести ладонями, 1 мин."], ["Round Lab капсульный крем с витамином C или Celimax Dual Barrier", "Витамин C — если нет красноты; Celimax — если кожа чувствительная."], ["VT Cosmetics Reedle Shot Lifting Eye Cream", "Малое количество вокруг орбитальной косточки."], ["Round Lab Birch Juice SPF / SPF Cushion", "SPF обязателен."]], "Вечер — ретиноид Celimax": [["Pyunkang Yul Deep Clear Cleansing Balm", "Если был SPF/макияж: 40–60 сек, смыть."], ["Round Lab 1025 Dokdo Cleanser", "20–30 сек, смыть."], ["Ma:nyo Bifida Biome Ampoule Toner", "Нанести и подождать 10–15 мин, чтобы кожа стала сухой."], ["Celimax The Vita-A Retinal Shot Tightening Booster / Celimax The Vita-A Retinol Shot Tightening Serum", "Чередовать по неделям. Горошина на лицо. Не наносить на подбородок/шею перед активами, крылья носа, уголки губ и близко к глазам."], ["Celimax Dual Barrier Skin Wearable Cream", "Через 10–15 мин после ретиноида."], ["Laneige Lip Sleeping Mask EX Berry", "Плотный слой. Можно заранее защитить уголки губ."]]}, "Среда": {"Утро": [["Вода или Round Lab 1025 Dokdo Cleanser", "Мягкое очищение после ретиноида."], ["Ma:nyo Bifida Biome Ampoule Toner", "1 мин."], ["Celimax Dual Barrier Skin Wearable Cream", "Лучше выбрать Celimax, если есть сухость/краснота."], ["VT Cosmetics Reedle Shot Lifting Eye Cream", "Тонкий слой."], ["Round Lab Birch Juice SPF / SPF Cushion", "Обязательно."]], "Вечер — восстановление и спокойный уход": [["Pyunkang Yul Deep Clear Cleansing Balm", "Если был SPF/макияж: мягко растворить на сухой коже 40–60 сек, затем смыть."], ["Round Lab 1025 Dokdo Cleanser", "20–30 сек, без активного трения, смыть тёплой водой."], ["Ma:nyo Bifida Biome Ampoule Toner", "Нанести ладонями, подождать 1 мин. Это вечер без активов."], ["Celimax Dual Barrier Skin Wearable Cream", "Средний или чуть плотный слой для поддержки барьера."], ["Laneige Lip Sleeping Mask EX Berry", "Последний этап, плотный слой на губы."]]}, "Четверг": {"Утро": [["Вода или Round Lab 1025 Dokdo Cleanser", "Без активного трения."], ["Ma:nyo Bifida Biome Ampoule Toner", "1 мин."], ["Celimax Dual Barrier Skin Wearable Cream", "В день аппаратных процедур не наносить активы на подбородок и шею."], ["VT Cosmetics Reedle Shot Lifting Eye Cream", "Тонкий слой."], ["Round Lab Birch Juice SPF / SPF Cushion", "SPF обязательно."]], "Вечер — восстановление и спокойный уход": [["Pyunkang Yul Deep Clear Cleansing Balm", "Если был SPF/макияж: мягко растворить на сухой коже 40–60 сек, затем смыть."], ["Round Lab 1025 Dokdo Cleanser", "20–30 сек, без активного трения, смыть тёплой водой."], ["Ma:nyo Bifida Biome Ampoule Toner", "Нанести ладонями, подождать 1 мин. Это вечер без активов."], ["Celimax Dual Barrier Skin Wearable Cream", "Средний или чуть плотный слой для поддержки барьера."], ["Laneige Lip Sleeping Mask EX Berry", "Последний этап, плотный слой на губы."]]}, "Пятница": {"Утро": [["Вода или Round Lab 1025 Dokdo Cleanser", "После аппаратных процедур максимально мягко."], ["Ma:nyo Bifida Biome Ampoule Toner", "1 мин."], ["Celimax Dual Barrier Skin Wearable Cream", "На лицо, подбородок и шею."], ["VT Cosmetics Reedle Shot Lifting Eye Cream", "Тонкий слой."], ["Round Lab Birch Juice SPF / SPF Cushion", "Обязательно на лицо, шею."]], "Вечер — восстановление и спокойный уход": [["Pyunkang Yul Deep Clear Cleansing Balm", "Если был SPF/макияж: мягко растворить на сухой коже 40–60 сек, затем смыть."], ["Round Lab 1025 Dokdo Cleanser", "20–30 сек, без активного трения, смыть тёплой водой."], ["Ma:nyo Bifida Biome Ampoule Toner", "Нанести ладонями, подождать 1 мин. Это вечер без активов."], ["Celimax Dual Barrier Skin Wearable Cream", "Средний или чуть плотный слой для поддержки барьера."], ["Laneige Lip Sleeping Mask EX Berry", "Последний этап, плотный слой на губы."]]}, "Суббота": {"Утро": [["Вода или Round Lab 1025 Dokdo Cleanser", "Мягкое очищение."], ["Ma:nyo Bifida Biome Ampoule Toner", "1 мин."], ["Round Lab капсульный крем с витамином C или Celimax Dual Barrier", "Если есть чувствительность после активов/аппаратов — Celimax."], ["VT Cosmetics Reedle Shot Lifting Eye Cream", "Тонко."], ["Round Lab Birch Juice SPF / SPF Cushion", "SPF обязателен."]], "Вечер — RF-лифтинг": [["Pyunkang Yul Deep Clear Cleansing Balm", "Если был SPF/макияж."], ["Round Lab 1025 Dokdo Cleanser", "20–30 сек, смыть."], ["Mesomatrix гель для RF-лифтинга", "Очень щедрый слой."], ["RF-лифтинг аппарат", "8–10 мин первые процедуры, затем 10–15 мин. Комфортное тепло, не задерживать насадку, чувствительные зоны пропускать."], ["Ma:nyo Bifida Biome Ampoule Toner", "После снятия/смывания геля."], ["Celimax Dual Barrier Skin Wearable Cream", "Восстанавливающий слой."], ["Laneige Lip Sleeping Mask EX Berry", "Последний этап."]]}, "Воскресенье": {"Утро": [["Вода или Round Lab 1025 Dokdo Cleanser", "Мягкое очищение."], ["Ma:nyo Bifida Biome Ampoule Toner", "1 мин."], ["Celimax Dual Barrier Skin Wearable Cream", "Лучше после RF/аппаратных процедур недели."], ["VT Cosmetics Reedle Shot Lifting Eye Cream", "Тонко."], ["Round Lab Birch Juice SPF / SPF Cushion", "SPF обязательно."]], "Вечер — восстановление / Anua по переносимости": [["Pyunkang Yul Deep Clear Cleansing Balm", "Если был SPF/макияж."], ["Round Lab 1025 Dokdo Cleanser", "20–30 сек, смыть."], ["Ma:nyo Bifida Biome Ampoule Toner", "1 мин."], ["Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum", "Только если кожа спокойная. Нанести тонко на лицо, избегая чувствительных зон. Подождать 5–10 мин."], ["Celimax Dual Barrier Skin Wearable Cream", "Закрыть уход."], ["Laneige Lip Sleeping Mask EX Berry", "Последний этап."]]}};
 const RULES = ["Ретиноиды Celimax и Anua Azelaic Acid 10% лучше использовать в разные вечера, чтобы не перегружать кожу.", "После ретиноидов, RF, микротоков и маски-плёнки делайте упор на восстановление: Ma:nyo toner → Celimax Dual Barrier.", "Если появилось жжение, шелушение или стойкая краснота, на 3–7 дней оставьте только мягкое очищение, тонер, барьерный крем и SPF.", "Arocell маску лучше делать 1 раз в 10–14 дней и не совмещать в один вечер с ретиноидами, азелаиновой кислотой или аппаратами.", "SPF Round Lab — каждый день утром, даже если погода пасмурная.", "RF и микротоки не делайте по раздражённой коже, ранкам и зонам с активным воспалением.", "Лучший результат даёт регулярность: мягкий уход каждый день важнее большого количества активов."];
@@ -36,6 +36,7 @@ function progressForDate(d){
 }
 
 
+
 function renderChecklist(){
   const dayObj=SCHEDULE[dayName(selectedDate)]||{}, root=document.getElementById('checklistContent');
   updateTopDayInfo();
@@ -46,7 +47,9 @@ function renderChecklist(){
     const blockClass=isDayBlock ? 'block day-block' : 'block night-block';
     tasks.forEach(t=>{
       const id=taskId(block,t[0]), checked=!!((doneState[iso(selectedDate)]||{})[id]);
-      rows += `<label class="task ${checked?'done-task':''}"><input class="check" type="checkbox" data-id="${esc(id)}" ${checked?'checked':''}><span class="box">✓</span><span class="task-text"><strong>${esc(t[0])}</strong><em>${esc(t[1])}</em></span></label>`;
+      const minutes=detectProcedureMinutes(t[0], t[1]);
+      const timerBadge=minutes ? `<span class="timer-badge">⏱ ${minutes} мин</span>` : ``;
+      rows += `<label class="task ${checked?'done-task':''}" data-minutes="${minutes}" data-title="${esc(t[0])}"><input class="check" type="checkbox" data-id="${esc(id)}" ${checked?'checked':''}><span class="box">✓</span><span class="task-text"><strong>${esc(t[0])}${timerBadge}</strong><em>${esc(t[1])}</em></span></label>`;
     });
     if(rows) html += `<section class="${blockClass}"><h3>${esc(block)}</h3><div class="tasks">${rows}</div></section>`;
   });
@@ -62,8 +65,12 @@ function renderChecklist(){
     const taskEl=ch.closest('.task');
     if(taskEl) taskEl.classList.toggle('done-task', ch.checked);
 
-    if(navigator.vibrate){
-      try{ navigator.vibrate(ch.checked ? 14 : 8); }catch(e){}
+    if(navigator.vibrate){ try{ navigator.vibrate(ch.checked ? 14 : 8); }catch(e){} }
+
+    if(ch.checked && taskEl){
+      const minutes=parseInt(taskEl.dataset.minutes||'0',10);
+      const title=taskEl.dataset.title||'Процедура';
+      if(minutes>5) startProcedureTimer(minutes, title);
     }
 
     updateProgress();
@@ -74,23 +81,51 @@ function renderChecklist(){
   bindSwipe(document.getElementById('swipeDayCard'));
 }
 
+
+
 function renderCalendar(){
   const grid=document.getElementById('calendarGrid'), title=document.getElementById('calendarTitle');
   title.textContent=MONTHS[currentMonth.getMonth()]+' '+currentMonth.getFullYear();
   grid.innerHTML='';
   ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'].forEach(w=>{ const e=document.createElement('div'); e.className='wd'; e.textContent=w; grid.appendChild(e); });
   const first=new Date(currentMonth.getFullYear(),currentMonth.getMonth(),1), offset=(first.getDay()+6)%7, start=addDays(first,-offset);
-  for(let i=0;i<42;i++){ const d=addDays(start,i), p=progressForDate(d), btn=document.createElement('button');
-    btn.type='button'; btn.className='day-cell'; if(d.getMonth()!=currentMonth.getMonth()) btn.classList.add('out'); if(iso(d)==iso(today)) btn.classList.add('today'); if(iso(d)==iso(selectedDate)) btn.classList.add('selected');
-    const moon=(p.total&&p.done===p.total)?`<span class="day-mark">☾</span>`:``;
-    const noteMark = dayNotesState[iso(d)] ? `<span class="day-note-mark">✎</span>` : ``;
-    btn.innerHTML=`<span class="day-num-wrap"><span class="day-num">${d.getDate()}</span><span class="day-icons">${noteMark}${moon}</span></span><span class="day-pct">${p.done}/${p.total} · ${p.pct}%</span><span class="mini-progress"><i style="width:${p.pct}%"></i></span>`;
-    btn.onclick=()=>{ selectedDate=new Date(d); if(selectedDate.getMonth()!=currentMonth.getMonth()) currentMonth=new Date(selectedDate.getFullYear(),selectedDate.getMonth(),1); updateCalendarNotePanel(selectedDate); renderCalendar(); };
+
+  for(let i=0;i<42;i++){
+    const d=addDays(start,i), p=progressForDate(d), btn=document.createElement('button');
+    const dateKey=iso(d);
+    btn.type='button';
+    btn.className='day-cell';
+    if(d.getMonth()!=currentMonth.getMonth()) btn.classList.add('out');
+    if(dateKey==iso(today)) btn.classList.add('today');
+    if(dateKey==iso(selectedDate)) btn.classList.add('selected');
+
+    const hasNote=!!dayNotesState[dateKey];
+    const isDone=!!(p.total&&p.done===p.total);
+    const noteMark = hasNote ? `<span class="day-note-mark" title="Есть заметка">✎</span>` : ``;
+    const moon = isDone ? `<span class="day-mark" title="День завершён">☾</span>` : ``;
+
+    btn.innerHTML=`
+      <span class="day-top-row">
+        <span class="day-num">${d.getDate()}</span>
+        <span class="day-icons">${noteMark}${moon}</span>
+      </span>
+      <span class="day-pct">${p.done}/${p.total} · ${p.pct}%</span>
+      <span class="mini-progress"><i style="width:${p.pct}%"></i></span>
+    `;
+
+    btn.onclick=()=>{
+      selectedDate=new Date(d);
+      if(selectedDate.getMonth()!=currentMonth.getMonth()) currentMonth=new Date(selectedDate.getFullYear(),selectedDate.getMonth(),1);
+      renderCalendar();
+      openCalendarDayModal(selectedDate);
+    };
+
     grid.appendChild(btn);
   }
   updateMonthStats();
-  updateCalendarNotePanel(selectedDate);
+  updateCalendarDayPanel(selectedDate);
 }
+
 
 function updateMonthStats(){
   const y=currentMonth.getFullYear(), m=currentMonth.getMonth(), days=new Date(y,m+1,0).getDate();
@@ -150,6 +185,102 @@ function maybeCelebrateSelectedDay(){
   }
 }
 
+
+
+let activeProcedureTimer=null;
+
+function detectProcedureMinutes(title, desc){
+  const text=((title||'')+' '+(desc||'')).toLowerCase();
+  if(!/(мин|мину)/.test(text)) return 0;
+  let best=0, m;
+  const rangeRe=/(\d{1,2})\s*[–—-]\s*(\d{1,2})\s*(?:мин|минут)/g;
+  while((m=rangeRe.exec(text))!==null){ best=Math.max(best, parseInt(m[2],10)); }
+  const singleRe=/(\d{1,2})\s*(?:мин|минут)/g;
+  while((m=singleRe.exec(text))!==null){ best=Math.max(best, parseInt(m[1],10)); }
+  return best>5 ? best : 0;
+}
+
+function formatTimerTime(totalSeconds){
+  totalSeconds=Math.max(0, Math.ceil(totalSeconds));
+  const mm=String(Math.floor(totalSeconds/60)).padStart(2,'0');
+  const ss=String(totalSeconds%60).padStart(2,'0');
+  return `${mm}:${ss}`;
+}
+
+function closeProcedureTimer(){
+  if(activeProcedureTimer && activeProcedureTimer.interval){
+    clearInterval(activeProcedureTimer.interval);
+  }
+  activeProcedureTimer=null;
+  const modal=document.getElementById('procedureTimerModal');
+  if(modal) modal.classList.remove('show','finished');
+}
+
+function renderProcedureTimer(){
+  if(!activeProcedureTimer) return;
+  const modal=document.getElementById('procedureTimerModal');
+  const timeEl=document.getElementById('timerTime');
+  const ring=document.getElementById('timerRing');
+  const pause=document.getElementById('timerPauseBtn');
+  const caption=document.getElementById('timerCaption');
+  const elapsed=(Date.now()-activeProcedureTimer.startedAt)/1000;
+  const remaining=activeProcedureTimer.paused ? activeProcedureTimer.remaining : activeProcedureTimer.total-elapsed;
+  const clamped=Math.max(0, remaining);
+  const pct=1-(clamped/activeProcedureTimer.total);
+  if(timeEl) timeEl.textContent=formatTimerTime(clamped);
+  if(ring) ring.style.setProperty('--timer-progress', `${Math.max(0, Math.min(1,pct))*360}deg`);
+  if(pause) pause.textContent=activeProcedureTimer.paused ? 'Продолжить' : 'Пауза';
+
+  if(clamped<=0){
+    if(activeProcedureTimer.interval) clearInterval(activeProcedureTimer.interval);
+    if(modal) modal.classList.add('finished');
+    if(timeEl) timeEl.textContent='00:00';
+    if(caption) caption.textContent='Процедура завершена ♡';
+    if(navigator.vibrate){ try{ navigator.vibrate([40,45,40,45,70]); }catch(e){} }
+    activeProcedureTimer=null;
+  }
+}
+
+function startProcedureTimer(minutes, title){
+  closeProcedureTimer();
+  const modal=document.getElementById('procedureTimerModal');
+  const titleEl=document.getElementById('timerTaskTitle');
+  const caption=document.getElementById('timerCaption');
+  const ring=document.getElementById('timerRing');
+  if(!modal) return;
+  if(titleEl) titleEl.textContent=title || 'Процедура';
+  if(caption) caption.textContent=`Обратный отсчёт на ${minutes} мин. Можно поставить на паузу или закрыть вручную.`;
+  if(ring) ring.style.setProperty('--timer-progress', '0deg');
+  activeProcedureTimer={total:minutes*60, remaining:minutes*60, startedAt:Date.now(), paused:false, interval:null};
+  modal.classList.add('show');
+  modal.classList.remove('finished');
+  renderProcedureTimer();
+  activeProcedureTimer.interval=setInterval(renderProcedureTimer, 250);
+  if(navigator.vibrate){ try{ navigator.vibrate([12,28,12]); }catch(e){} }
+}
+
+function toggleProcedureTimerPause(){
+  const modal=document.getElementById('procedureTimerModal');
+  if(!activeProcedureTimer){
+    if(modal && modal.classList.contains('show')) closeProcedureTimer();
+    return;
+  }
+
+  if(activeProcedureTimer.paused){
+    activeProcedureTimer.paused=false;
+    activeProcedureTimer.startedAt=Date.now()-(activeProcedureTimer.total-activeProcedureTimer.remaining)*1000;
+    if(activeProcedureTimer.interval) clearInterval(activeProcedureTimer.interval);
+    activeProcedureTimer.interval=setInterval(renderProcedureTimer,250);
+    if(navigator.vibrate){ try{ navigator.vibrate(8); }catch(e){} }
+  }else{
+    const elapsed=(Date.now()-activeProcedureTimer.startedAt)/1000;
+    activeProcedureTimer.remaining=Math.max(0, activeProcedureTimer.total-elapsed);
+    activeProcedureTimer.paused=true;
+    if(activeProcedureTimer.interval) clearInterval(activeProcedureTimer.interval);
+    if(navigator.vibrate){ try{ navigator.vibrate(8); }catch(e){} }
+  }
+  renderProcedureTimer();
+}
 
 function updateTopDayInfo(){
   const topDate=document.getElementById('topSelectedDate');
@@ -308,14 +439,16 @@ function saveDayNotes(){
   if(value) dayNotesState[key]=value;
   else delete dayNotesState[key];
   safeWrite(DAY_NOTES_KEY, dayNotesState);
-  updateCalendarNotePanel(selectedDate);
+  updateCalendarDayPanel(selectedDate);
+  if(document.getElementById('calendarDayModal')?.classList.contains('show')) fillCalendarDayModal(selectedDate);
   renderCalendar();
-  updateCalendarNotePanel(selectedDate);
+  updateCalendarDayPanel(selectedDate);
   if(navigator.vibrate){
     try{ navigator.vibrate(10); }catch(e){}
   }
   closeDayNotes();
-  updateCalendarNotePanel(selectedDate);
+  updateCalendarDayPanel(selectedDate);
+  if(document.getElementById('calendarDayModal')?.classList.contains('show')) fillCalendarDayModal(selectedDate);
   renderCalendar();
 }
 function clearDayNotes(){
@@ -328,25 +461,197 @@ function clearDayNotes(){
 
 
 
+
+function getTasksForDate(dateObj){
+  const dayObj=SCHEDULE[dayName(dateObj)]||{};
+  const st=doneState[iso(dateObj)]||{};
+  const all=[];
+  const completed=[];
+  Object.entries(dayObj).forEach(([block,tasks])=>{
+    tasks.forEach(t=>{
+      const id=taskId(block,t[0]);
+      const item={block:block, title:t[0], desc:t[1], done:!!st[id]};
+      all.push(item);
+      if(item.done) completed.push(item);
+    });
+  });
+  return {all, completed};
+}
+
 function updateCalendarNotePanel(dateObj){
+  updateCalendarDayPanel(dateObj);
+}
+
+function updateCalendarDayPanel(dateObj){
   const date = dateObj || selectedDate;
-  const dateLabel = date.toLocaleDateString('ru-RU',{weekday:'long', day:'numeric', month:'long', year:'numeric'});
-  const body = document.getElementById('calendarNoteBody');
-  const head = document.getElementById('calendarNoteDate');
-  const btn = document.getElementById('calendarOpenDayNote');
-  if(head) head.textContent = dateLabel;
-  const key = iso(date);
-  const note = dayNotesState[key];
-  if(body){
-    body.textContent = note ? note : 'Для этого дня пока нет заметки.';
-    body.classList.toggle('empty', !note);
+  const key=iso(date);
+  const label = date.toLocaleDateString('ru-RU',{weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  const p=progressForDate(date);
+  const tasks=getTasksForDate(date);
+  const dateEl=document.getElementById('calendarDayDate');
+  const progressEl=document.getElementById('calendarDayProgress');
+  const percentEl=document.getElementById('calendarDayPercent');
+  const listEl=document.getElementById('calendarCompletedList');
+  const noteEl=document.getElementById('calendarNoteBody');
+  const openBtn=document.getElementById('calendarOpenChecklistDay');
+
+  if(dateEl) dateEl.textContent=label;
+  if(progressEl) progressEl.textContent=`${p.done}/${p.total}`;
+  if(percentEl) percentEl.textContent=`${p.pct}%`;
+  if(openBtn) openBtn.dataset.date=key;
+
+  if(listEl){
+    if(tasks.completed.length){
+      listEl.innerHTML=tasks.completed.map(item=>`
+        <div class="completed-procedure">
+          <span class="completed-check">✓</span>
+          <div>
+            <strong>${esc(item.title)}</strong>
+            <em>${esc(item.block)}</em>
+          </div>
+        </div>
+      `).join('');
+      listEl.classList.remove('empty');
+    }else{
+      listEl.textContent='В этот день пока нет выполненных процедур.';
+      listEl.classList.add('empty');
+    }
   }
-  if(btn){
-    btn.dataset.date = key;
+
+  if(noteEl){
+    const note=dayNotesState[key];
+    noteEl.textContent = note ? note : 'Для этого дня пока нет заметки.';
+    noteEl.classList.toggle('empty', !note);
   }
 }
 
+
+
+function bindProcedureTimerButtons(){
+  if(window.__timerButtonsBound) return;
+  window.__timerButtonsBound=true;
+
+  document.addEventListener('click', (e)=>{
+    const pauseBtn=e.target.closest && e.target.closest('#timerPauseBtn');
+    const doneBtn=e.target.closest && e.target.closest('#timerDoneBtn');
+    if(pauseBtn){
+      e.preventDefault();
+      e.stopPropagation();
+      toggleProcedureTimerPause();
+    }
+    if(doneBtn){
+      e.preventDefault();
+      e.stopPropagation();
+      closeProcedureTimer();
+    }
+  }, true);
+
+  document.addEventListener('touchend', (e)=>{
+    const pauseBtn=e.target.closest && e.target.closest('#timerPauseBtn');
+    const doneBtn=e.target.closest && e.target.closest('#timerDoneBtn');
+    if(pauseBtn || doneBtn){
+      e.preventDefault();
+      e.stopPropagation();
+      if(pauseBtn) toggleProcedureTimerPause();
+      if(doneBtn) closeProcedureTimer();
+    }
+  }, {capture:true, passive:false});
+}
+
+
+function fillCalendarDayModal(dateObj){
+  const date=dateObj||selectedDate;
+  const key=iso(date);
+  const p=progressForDate(date);
+  const tasks=getTasksForDate(date);
+  const dateEl=document.getElementById('calendarModalDate');
+  const progressEl=document.getElementById('calendarModalProgress');
+  const percentEl=document.getElementById('calendarModalPercent');
+  const listEl=document.getElementById('calendarModalCompletedList');
+  const noteEl=document.getElementById('calendarModalNoteBody');
+  const openBtn=document.getElementById('calendarModalOpenChecklist');
+
+  if(dateEl) dateEl.textContent=date.toLocaleDateString('ru-RU',{weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  if(progressEl) progressEl.textContent=`${p.done}/${p.total}`;
+  if(percentEl) percentEl.textContent=`${p.pct}%`;
+  if(openBtn) openBtn.dataset.date=key;
+
+  if(listEl){
+    if(tasks.completed.length){
+      listEl.innerHTML=tasks.completed.map(item=>`
+        <div class="completed-procedure">
+          <span class="completed-check">✓</span>
+          <div>
+            <strong>${esc(item.title)}</strong>
+            <em>${esc(item.block)}</em>
+          </div>
+        </div>
+      `).join('');
+      listEl.classList.remove('empty');
+    }else{
+      listEl.textContent='В этот день пока нет выполненных процедур.';
+      listEl.classList.add('empty');
+    }
+  }
+
+  if(noteEl){
+    const note=dayNotesState[key];
+    noteEl.textContent=note ? note : 'Для этого дня пока нет заметки.';
+    noteEl.classList.toggle('empty', !note);
+  }
+}
+
+function openCalendarDayModal(dateObj){
+  if(dateObj) selectedDate=new Date(dateObj);
+  fillCalendarDayModal(selectedDate);
+  const modal=document.getElementById('calendarDayModal');
+  if(modal){
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden','false');
+  }
+}
+
+function closeCalendarDayModal(){
+  const modal=document.getElementById('calendarDayModal');
+  if(modal){
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden','true');
+  }
+}
+
+
+function bindCalendarModalClose(){
+  if(window.__calendarModalCloseBound) return;
+  window.__calendarModalCloseBound=true;
+
+  document.addEventListener('click', (e)=>{
+    const closeBtn=e.target.closest && e.target.closest('#calendarDayModalClose');
+    const backdrop=e.target.closest && e.target.closest('[data-close-calendar-day="1"]');
+    if(closeBtn || backdrop){
+      e.preventDefault();
+      e.stopPropagation();
+      closeCalendarDayModal();
+    }
+  }, true);
+
+  document.addEventListener('touchend', (e)=>{
+    const closeBtn=e.target.closest && e.target.closest('#calendarDayModalClose');
+    const backdrop=e.target.closest && e.target.closest('[data-close-calendar-day="1"]');
+    if(closeBtn || backdrop){
+      e.preventDefault();
+      e.stopPropagation();
+      closeCalendarDayModal();
+    }
+  }, {capture:true, passive:false});
+
+  document.addEventListener('keydown', (e)=>{
+    if(e.key==='Escape') closeCalendarDayModal();
+  });
+}
+
 function init(){
+  bindCalendarModalClose();
+  bindProcedureTimerButtons();
   document.querySelectorAll('[data-tab]').forEach(btn=>btn.addEventListener('click',()=>setView(btn.dataset.tab)));
 
   const todayTop=document.getElementById('todayBtnTop');
@@ -403,4 +708,4 @@ function init(){
 }
 
 document.addEventListener('DOMContentLoaded', init);
-if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js?v13-clean-final').then(reg=>reg.update()).catch(()=>{}));
+if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js?v19-calendar-close-fix').then(reg=>reg.update()).catch(()=>{}));

@@ -4,9 +4,9 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beauty Planner — уход и календарь</title>
 <meta name="theme-color" content="#b85f82">
-<link rel="manifest" href="manifest.json?v14-notes-icon"><link rel="icon" href="icons/icon-512.svg?v14-notes-icon"><link rel="stylesheet" href="style.css?v14-notes-icon">
+<link rel="manifest" href="manifest.json?v19-calendar-close-fix"><link rel="icon" href="icons/icon-512.svg?v19-calendar-close-fix"><link rel="stylesheet" href="style.css?v19-calendar-close-fix">
 </head>
-<body data-app-version="v13-clean-final">
+<body data-app-version="v19-calendar-close-fix">
 <main class="app">
 <section class="top"><div class="hero">
 <h1>Beauty Planner</h1>
@@ -48,14 +48,32 @@
 <div class="stat"><b id="monthPerfect">0</b><span class="muted">дней выполнено полностью</span></div>
 <div class="stat"><b id="monthActiveDays">0</b><span class="muted">дней с отметками</span></div>
 </div>
-<div class="calendar-note-panel" id="calendarNotePanel">
-  <div class="calendar-note-head">
-    <h3>Заметка дня</h3>
-    <button id="calendarOpenDayNote" class="secondary mini-pill" type="button">Открыть день</button>
+
+<div class="calendar-day-panel" id="calendarDayPanel">
+  <div class="calendar-day-head">
+    <div>
+      <h3>Детали дня</h3>
+      <div class="calendar-day-date" id="calendarDayDate">Выберите дату в календаре</div>
+    </div>
+    <button id="calendarOpenChecklistDay" class="secondary mini-pill" type="button">Открыть чек-лист</button>
   </div>
-  <div class="calendar-note-date" id="calendarNoteDate">Выберите день в календаре</div>
-  <div class="calendar-note-body" id="calendarNoteBody">Если к дню есть заметка, она появится здесь.</div>
+
+  <div class="calendar-day-stats">
+    <div class="mini-stat"><b id="calendarDayProgress">0/0</b><span>выполнено</span></div>
+    <div class="mini-stat"><b id="calendarDayPercent">0%</b><span>прогресс</span></div>
+  </div>
+
+  <div class="calendar-detail-block">
+    <h4>Выполненные процедуры</h4>
+    <div class="calendar-completed-list" id="calendarCompletedList">Выберите день, чтобы посмотреть выполненные этапы.</div>
+  </div>
+
+  <div class="calendar-detail-block">
+    <h4>Заметка</h4>
+    <div class="calendar-note-body" id="calendarNoteBody">Если к дню есть заметка, она появится здесь.</div>
+  </div>
 </div>
+
 </section></section>
 
 <section class="view" data-view="products"><section class="panel">
@@ -96,7 +114,7 @@
 <button id="resetDayBottom" class="secondary pill-btn">Сбросить день</button>
 <button id="dayNotesBtn" class="secondary pill-btn">Заметки дня</button>
 </div></nav>
-<script src="app.js?v14-notes-icon"></script>
+<script src="app.js?v19-calendar-close-fix"></script>
 
 <div id="dayCelebration" class="celebration-overlay" aria-hidden="true">
   <div class="celebration-heart-backdrop"></div>
@@ -121,6 +139,54 @@
       <button id="saveDayNotes" class="secondary pill-btn" type="button">Сохранить</button>
       <button id="clearDayNotes" class="secondary pill-btn" type="button">Очистить</button>
     </div>
+  </div>
+</div>
+
+
+<div id="procedureTimerModal" class="timer-modal" aria-hidden="true">
+  <div class="timer-backdrop"></div>
+  <div class="timer-sheet">
+    <div class="timer-topline">Таймер процедуры</div>
+    <h3 id="timerTaskTitle">Процедура</h3>
+    <div class="timer-ring" id="timerRing" style="--timer-progress: 0deg;">
+      <div class="timer-time" id="timerTime">00:00</div>
+    </div>
+    <div class="timer-caption" id="timerCaption">Обратный отсчёт запущен после отметки пункта.</div>
+    <div class="timer-actions">
+      <button id="timerPauseBtn" class="secondary pill-btn timer-action-btn" type="button" aria-label="Поставить таймер на паузу">Пауза</button>
+      <button id="timerDoneBtn" class="secondary pill-btn timer-action-btn" type="button" aria-label="Закрыть таймер">Готово</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="calendarDayModal" class="calendar-day-modal" aria-hidden="true">
+  <div class="calendar-day-backdrop" data-close-calendar-day="1"></div>
+  <div class="calendar-day-sheet">
+    <div class="calendar-day-modal-head">
+      <div>
+        <div class="calendar-day-modal-label">Детали дня</div>
+        <h3 id="calendarModalDate">Выберите дату</h3>
+      </div>
+      <button id="calendarDayModalClose" class="notes-close calendar-close-btn" type="button" aria-label="Закрыть окно">✕</button>
+    </div>
+
+    <div class="calendar-day-stats modal-stats">
+      <div class="mini-stat"><b id="calendarModalProgress">0/0</b><span>выполнено</span></div>
+      <div class="mini-stat"><b id="calendarModalPercent">0%</b><span>прогресс</span></div>
+    </div>
+
+    <div class="calendar-modal-section">
+      <h4>Проделанные процедуры</h4>
+      <div class="calendar-completed-list" id="calendarModalCompletedList">Выберите день, чтобы посмотреть выполненные этапы.</div>
+    </div>
+
+    <div class="calendar-modal-section calendar-modal-note-section">
+      <h4>Заметка</h4>
+      <div class="calendar-note-body" id="calendarModalNoteBody">Если к дню есть заметка, она появится здесь.</div>
+    </div>
+
+    <button id="calendarModalOpenChecklist" class="secondary pill-btn calendar-modal-main-btn" type="button">Открыть чек-лист этого дня</button>
   </div>
 </div>
 

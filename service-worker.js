@@ -1,10 +1,10 @@
-const CACHE='beauty-planner-v14-notes-icon';
+const CACHE='beauty-planner-v19-calendar-close-fix';
 const ASSETS=[
   './',
   './index.html',
-  './style.css?v13-clean-final',
-  './app.js?v13-clean-final',
-  './manifest.json?v13-clean-final',
+  './style.css?v19-calendar-close-fix',
+  './app.js?v19-calendar-close-fix',
+  './manifest.json?v19-calendar-close-fix',
   './icons/icon-192.svg',
   './icons/icon-512.svg'
 ];

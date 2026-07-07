@@ -1542,3 +1542,407 @@ body::before{
     font-size:88px !important;
   }
 }
+
+/* Procedure countdown timers v15 */
+.timer-badge{
+  display:inline-flex;
+  align-items:center;
+  margin-left:7px;
+  padding:3px 7px;
+  border-radius:999px;
+  background:rgba(255,255,255,.34);
+  border:1px solid rgba(255,255,255,.38);
+  color:#7c6f8b;
+  font-size:11px;
+  font-weight:900;
+  white-space:nowrap;
+  vertical-align:middle;
+}
+.timer-modal{position:fixed;inset:0;display:none;z-index:150;}
+.timer-modal.show{display:block;}
+.timer-backdrop{position:absolute;inset:0;background:rgba(64,56,74,.16);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);}
+.timer-sheet{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(90vw,390px);padding:20px;border-radius:30px;
+  background:rgba(255,255,255,.70);border:1px solid rgba(255,255,255,.78);
+  box-shadow:0 20px 58px rgba(112,101,128,.22), inset 0 1px 0 rgba(255,255,255,.46);
+  backdrop-filter:blur(22px) saturate(1.10);-webkit-backdrop-filter:blur(22px) saturate(1.10);
+  text-align:center;animation:timerPop .32s cubic-bezier(.2,.9,.2,1) both;
+}
+.timer-topline{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#8b8095;font-weight:900;}
+.timer-sheet h3{margin:6px auto 16px auto;max-width:300px;color:#5f566c;font-size:18px;line-height:1.25;}
+.timer-ring{
+  --timer-progress:0deg;width:178px;height:178px;margin:0 auto 14px auto;border-radius:999px;display:grid;place-items:center;
+  background:conic-gradient(#ee9fc0 var(--timer-progress), rgba(255,255,255,.42) 0deg), radial-gradient(circle, rgba(255,255,255,.82) 0 56%, transparent 57%);
+  box-shadow:0 12px 36px rgba(238,159,192,.18), inset 0 0 0 1px rgba(255,255,255,.52);
+}
+.timer-time{
+  width:126px;height:126px;border-radius:999px;display:grid;place-items:center;background:rgba(255,255,255,.74);
+  color:#5f566c;font-size:34px;font-weight:950;letter-spacing:.02em;box-shadow:inset 0 1px 0 rgba(255,255,255,.54);
+}
+.timer-caption{max-width:310px;margin:0 auto 14px auto;color:#756b80;font-size:13px;line-height:1.38;}
+.timer-actions{display:flex;justify-content:center;gap:10px;}
+.timer-actions .pill-btn{min-width:130px;}
+.timer-modal.finished .timer-ring{
+  background:conic-gradient(#d9c6e5 360deg, rgba(255,255,255,.42) 0deg), radial-gradient(circle, rgba(255,255,255,.82) 0 56%, transparent 57%);
+  animation:timerFinishPulse .8s ease both;
+}
+@keyframes timerPop{0%{opacity:0;transform:translate(-50%,-47%) scale(.96);filter:blur(4px);}100%{opacity:1;transform:translate(-50%,-50%) scale(1);filter:blur(0);}}
+@keyframes timerFinishPulse{0%{transform:scale(1);}45%{transform:scale(1.04);}100%{transform:scale(1);}}
+@media (max-width:520px){
+  .timer-sheet{width:min(92vw,390px);padding:18px;border-radius:26px;}
+  .timer-ring{width:160px;height:160px;}
+  .timer-time{width:114px;height:114px;font-size:30px;}
+  .timer-actions .pill-btn{min-width:0;flex:1;}
+}
+
+/* Timer buttons fix v16 */
+.timer-sheet{
+  z-index:2 !important;
+  pointer-events:auto !important;
+}
+.timer-backdrop{
+  z-index:1 !important;
+}
+.timer-actions,
+.timer-action-btn,
+#timerPauseBtn,
+#timerDoneBtn{
+  position:relative;
+  z-index:5 !important;
+  pointer-events:auto !important;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+}
+#timerPauseBtn:active,
+#timerDoneBtn:active{
+  transform:scale(.98);
+}
+
+/* Calendar day details + fixed calendar icons v17 */
+.day-cell{
+  position:relative;
+  overflow:hidden !important;
+  padding:7px !important;
+  grid-template-rows:auto auto auto;
+}
+.day-num-wrap{
+  display:none !important;
+}
+.day-top-row{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:4px;
+  min-width:0;
+}
+.day-num{
+  position:relative;
+  z-index:1;
+  line-height:1;
+  font-weight:900;
+}
+.day-icons{
+  position:static !important;
+  display:flex !important;
+  align-items:center;
+  justify-content:flex-end;
+  gap:3px;
+  max-width:34px;
+  min-height:15px;
+  overflow:hidden;
+  flex:0 0 auto;
+  line-height:1;
+}
+.day-note-mark,
+.day-mark{
+  position:static !important;
+  display:inline-grid;
+  place-items:center;
+  width:14px;
+  height:14px;
+  border-radius:999px;
+  font-size:10px !important;
+  line-height:1 !important;
+  flex:0 0 auto;
+  background:rgba(255,255,255,.34);
+  border:1px solid rgba(255,255,255,.36);
+}
+.day-note-mark{
+  color:#b67e97 !important;
+}
+.day-mark{
+  color:#7f72a0 !important;
+}
+.day-cell:has(.day-mark)::after,
+.day-cell:has(.day-note-mark)::before{
+  display:none !important;
+  content:none !important;
+}
+.day-pct{
+  font-size:10.5px !important;
+  line-height:1.15 !important;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.calendar-day-panel{
+  margin:14px auto 0 auto;
+  max-width:820px;
+  padding:14px;
+  border-radius:24px;
+  background:rgba(255,255,255,.30);
+  border:1px solid rgba(255,255,255,.40);
+  box-shadow:0 12px 30px rgba(128,124,150,.08);
+  backdrop-filter:blur(14px) saturate(1.06);
+  -webkit-backdrop-filter:blur(14px) saturate(1.06);
+  text-align:left;
+}
+.calendar-day-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+.calendar-day-head h3{
+  margin:0 0 4px 0;
+  color:#5f566c;
+  font-size:17px;
+}
+.calendar-day-date{
+  color:#7a7186;
+  font-size:12.5px;
+  font-weight:800;
+}
+.calendar-day-stats{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+  margin-bottom:12px;
+}
+.mini-stat{
+  border-radius:17px;
+  padding:10px 12px;
+  background:rgba(255,255,255,.24);
+  border:1px solid rgba(255,255,255,.34);
+  text-align:center;
+}
+.mini-stat b{
+  display:block;
+  color:#5f566c;
+  font-size:18px;
+}
+.mini-stat span{
+  display:block;
+  color:#7a7186;
+  font-size:11.5px;
+  font-weight:800;
+  margin-top:2px;
+}
+.calendar-detail-block{
+  margin-top:10px;
+}
+.calendar-detail-block h4{
+  margin:0 0 8px 0;
+  color:#5f566c;
+  font-size:14px;
+}
+.calendar-completed-list{
+  display:grid;
+  gap:7px;
+}
+.calendar-completed-list.empty{
+  padding:12px 13px;
+  border-radius:18px;
+  background:rgba(255,255,255,.24);
+  border:1px solid rgba(255,255,255,.32);
+  color:#8a8194;
+  font-size:13px;
+}
+.completed-procedure{
+  display:grid;
+  grid-template-columns:26px 1fr;
+  align-items:start;
+  gap:8px;
+  padding:10px 11px;
+  border-radius:17px;
+  background:rgba(255,255,255,.24);
+  border:1px solid rgba(255,255,255,.34);
+}
+.completed-check{
+  width:24px;
+  height:24px;
+  border-radius:9px;
+  display:grid;
+  place-items:center;
+  background:rgba(238,159,192,.38);
+  color:#5f566c;
+  font-weight:950;
+}
+.completed-procedure strong{
+  display:block;
+  color:#5b5362;
+  font-size:13px;
+  line-height:1.25;
+}
+.completed-procedure em{
+  display:block;
+  margin-top:3px;
+  color:#8a8194;
+  font-size:11.5px;
+  font-style:normal;
+  font-weight:800;
+}
+@media (max-width:520px){
+  .day-cell{
+    min-height:68px !important;
+    padding:6px !important;
+  }
+  .day-icons{
+    max-width:30px;
+    gap:2px;
+  }
+  .day-note-mark,
+  .day-mark{
+    width:13px;
+    height:13px;
+    font-size:9px !important;
+  }
+  .day-pct{
+    font-size:9.5px !important;
+  }
+  .calendar-day-head{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  #calendarOpenChecklistDay,
+  .mini-pill{
+    width:100%;
+  }
+}
+
+/* Calendar popup day details v18 */
+.calendar-day-panel{
+  display:none !important;
+}
+.calendar-day-modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  z-index:145;
+}
+.calendar-day-modal.show{
+  display:block;
+}
+.calendar-day-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(55,48,64,.18);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.calendar-day-sheet{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:min(92vw,560px);
+  max-height:min(82vh,720px);
+  overflow:auto;
+  border-radius:30px;
+  padding:18px;
+  background:rgba(255,255,255,.70);
+  border:1px solid rgba(255,255,255,.78);
+  box-shadow:
+    0 24px 64px rgba(112,101,128,.24),
+    inset 0 1px 0 rgba(255,255,255,.50);
+  backdrop-filter:blur(22px) saturate(1.12);
+  -webkit-backdrop-filter:blur(22px) saturate(1.12);
+  animation:calendarModalPop .32s cubic-bezier(.2,.9,.2,1) both;
+}
+.calendar-day-modal-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+.calendar-day-modal-label{
+  font-size:11px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:#8b8095;
+  font-weight:900;
+}
+.calendar-day-modal-head h3{
+  margin:4px 0 0 0;
+  color:#5f566c;
+  font-size:19px;
+  line-height:1.25;
+}
+.modal-stats{
+  margin-bottom:14px;
+}
+.calendar-modal-section{
+  margin-top:12px;
+}
+.calendar-modal-section h4{
+  margin:0 0 8px 0;
+  color:#5f566c;
+  font-size:14px;
+}
+.calendar-modal-note-section{
+  margin-top:16px;
+  padding-top:12px;
+  border-top:1px dashed rgba(142,130,154,.24);
+}
+#calendarModalNoteBody{
+  min-height:84px;
+}
+.calendar-modal-main-btn{
+  width:100%;
+  margin-top:14px;
+}
+@keyframes calendarModalPop{
+  0%{opacity:0; transform:translate(-50%,-47%) scale(.96); filter:blur(4px);}
+  100%{opacity:1; transform:translate(-50%,-50%) scale(1); filter:blur(0);}
+}
+@media (max-width:520px){
+  .calendar-day-sheet{
+    width:min(94vw,560px);
+    max-height:84vh;
+    border-radius:26px;
+    padding:15px;
+  }
+  .calendar-day-modal-head h3{
+    font-size:17px;
+  }
+}
+
+/* Calendar modal close fix v19 */
+.calendar-day-modal{
+  pointer-events:none;
+}
+.calendar-day-modal.show{
+  pointer-events:auto;
+}
+.calendar-day-backdrop{
+  z-index:1 !important;
+  pointer-events:auto !important;
+}
+.calendar-day-sheet{
+  z-index:2 !important;
+  pointer-events:auto !important;
+}
+.calendar-close-btn,
+#calendarDayModalClose{
+  position:relative;
+  z-index:10 !important;
+  pointer-events:auto !important;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+}
+#calendarDayModalClose:active{
+  transform:scale(.96);
+}
